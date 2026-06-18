@@ -32,10 +32,6 @@ nav a:hover{opacity:.5}
 .btn-contact{background:linear-gradient(123deg,#18011F 7%,#B600A8 37%,#7621B0 72%,#BE4C00 100%);border:2px solid white;outline:3px solid rgba(255,255,255,.15);outline-offset:-3px;border-radius:9999px;color:white;font-family:'Kanit',sans-serif;font-weight:500;font-size:clamp(.7rem,.9vw,1rem);text-transform:uppercase;letter-spacing:.15em;padding:clamp(.6rem,1vw,1rem) clamp(1.5rem,2.5vw,3rem);cursor:pointer;box-shadow:0 4px 4px rgba(181,1,167,.25),inset 4px 4px 12px #7721B1;transition:opacity .2s;border:none}
 .btn-contact:hover{opacity:.85}
 
-/* MARQUEE */
-#marquee{background:#0C0C0C;padding:6rem 0 2rem;overflow:hidden}
-.marquee-row{display:flex;gap:12px;margin-bottom:12px;will-change:transform;transition:transform .1s linear}
-.marquee-row img{width:280px;height:180px;object-fit:cover;border-radius:1rem;flex-shrink:0}
 
 /* ABOUT */
 #about{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:5rem 2rem;text-align:center;overflow:hidden}
@@ -120,7 +116,7 @@ nav a:hover{opacity:.5}
 .feat-anim.play .buzz-body{animation:buzz-shake .4s ease .1s infinite}
 
 /* PROJECTS */
-#projects{background:#0C0C0C;border-radius:3.5rem 3.5rem 0 0;padding:5rem 2rem 8rem;margin-top:-3rem;position:relative;z-index:10}
+#projects{background:#0C0C0C;border-radius:3.5rem 3.5rem 0 0;padding:5rem 2rem 4rem;margin-top:-3rem;position:relative;z-index:10}
 .projects-heading{font-size:clamp(3rem,12vw,160px);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;text-align:center;margin-bottom:4rem}
 .use-cases{display:flex;flex-direction:column;gap:1.5rem}
 .uc-card{border-radius:3rem;border:2px solid rgba(215,226,234,.4);background:#0C0C0C;padding:clamp(1.5rem,2.5vw,2.5rem);display:grid;grid-template-columns:clamp(180px,28vw,380px) 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start}
@@ -130,7 +126,7 @@ nav a:hover{opacity:.5}
 .uc-img{border-radius:2rem;overflow:hidden;background:rgba(215,226,234,.06);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .uc-img img{width:100%;height:100%;object-fit:cover;border-radius:2rem;display:block}
 .uc-body{display:flex;flex-direction:column;gap:.6rem;padding-top:.4rem}
-.uc-num{font-size:clamp(2.5rem,7vw,7rem);font-weight:900;line-height:1;color:#D7E2EA;opacity:.2;line-height:.85;margin-bottom:.4rem}
+.uc-num{font-size:clamp(2rem,5.5vw,5.5rem);font-weight:900;line-height:1;color:#D7E2EA;opacity:.2;margin-bottom:.4rem;letter-spacing:.04em}
 .uc-cat{font-size:clamp(.6rem,.8vw,.78rem);text-transform:uppercase;letter-spacing:.18em;color:#D7E2EA;opacity:.45}
 .uc-title{font-size:clamp(1.1rem,2.6vw,2.6rem);font-weight:700;text-transform:uppercase;color:#D7E2EA;letter-spacing:.02em;line-height:1.05}
 .uc-desc{font-weight:300;line-height:1.75;font-size:clamp(.82rem,1.35vw,1.1rem);color:rgba(215,226,234,.6);margin-top:.5rem}
@@ -146,7 +142,124 @@ nav a:hover{opacity:.5}
 }
 
 /* FOOTER */
-footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226,234,.3);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+footer{background:#0C0C0C;text-align:center;padding:5rem 2rem 3rem;color:rgba(215,226,234,.3);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.footer-tagline{font-size:clamp(.75rem,1.2vw,1rem);font-style:italic;font-weight:300;color:rgba(215,226,234,.25);margin-top:1.5rem;letter-spacing:.06em;text-transform:none;font-family:'Kanit',sans-serif}
+
+/* WHY PALAVITA — dark */
+#why-palavita{background:#0C0C0C;padding:4rem 2.5rem 3rem;position:relative;overflow:hidden}
+#why-palavita::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 30% 50%,rgba(118,33,176,.06) 0%,transparent 70%);pointer-events:none}
+.why-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.why-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(215,226,234,.3);margin-bottom:1.2rem}
+.why-big-heading{font-size:clamp(2.8rem,7vw,8.5rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.85;background:linear-gradient(180deg,#646973 0%,#BBCCD7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:2rem}
+.why-sub-heading{font-size:clamp(1rem,1.8vw,1.4rem);font-weight:500;color:#D7E2EA;margin-bottom:1rem;letter-spacing:.02em}
+.why-body{font-size:clamp(.82rem,1.35vw,1.05rem);font-weight:300;line-height:1.85;color:rgba(215,226,234,.55)}
+.why-quote{border-left:2px solid rgba(118,33,176,.6);padding-left:1.5rem;margin-top:2rem;font-size:clamp(.85rem,1.4vw,1.1rem);font-weight:300;font-style:italic;color:rgba(215,226,234,.45);line-height:1.7}
+@media(max-width:760px){.why-inner{grid-template-columns:1fr;gap:3rem}}
+
+/* WHY CHOOSE — cursor spotlight dark grid */
+#why-choose{background:#0C0C0C;color:#D7E2EA;border-radius:3.5rem 3.5rem 0 0;padding:4rem 2.5rem 3rem;position:relative;z-index:5;overflow:hidden}
+#why-choose::before{content:'';position:absolute;inset:0;background:radial-gradient(circle 600px at var(--cx,50%) var(--cy,50%),rgba(220,100,30,.09) 0%,transparent 65%);pointer-events:none}
+.wc-heading-wrap{text-align:center;margin-bottom:5rem}
+.wc-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(215,226,234,.3);margin-bottom:1rem}
+.wc-heading{font-size:clamp(2.5rem,7vw,8rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.88;background:linear-gradient(180deg,#646973 0%,#BBCCD7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem}
+.wc-sub{font-size:clamp(.85rem,1.4vw,1.1rem);font-weight:300;color:rgba(215,226,234,.4);max-width:560px;margin:0 auto;line-height:1.75}
+.wc-grid{display:grid;grid-template-columns:1fr 1fr;max-width:1000px;margin:0 auto;border:1px solid rgba(215,226,234,.08);border-radius:2.5rem;overflow:hidden}
+.wc-item{padding:clamp(2.5rem,4vw,4rem) clamp(2rem,3.5vw,3.5rem);position:relative;overflow:hidden;cursor:default;border-right:1px solid rgba(215,226,234,.08);border-bottom:1px solid rgba(215,226,234,.08);transition:background .4s ease}
+.wc-item:nth-child(even){border-right:none}
+.wc-item:nth-child(3),.wc-item:nth-child(4){border-bottom:none}
+.wc-item::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(220,100,30,.2) 0%,transparent 70%);left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);opacity:0;transition:opacity .3s ease;pointer-events:none}
+.wc-item:hover::before{opacity:1}
+.wc-item-num{font-size:clamp(3.5rem,6.5vw,7.5rem);font-weight:900;line-height:1;color:rgba(255,255,255,.12);-webkit-text-stroke:1px rgba(255,255,255,.22);letter-spacing:.04em;margin-bottom:1.5rem;display:block;transition:color .4s ease,-webkit-text-stroke-color .4s ease}
+.wc-item:hover .wc-item-num{color:rgba(255,255,255,.25);-webkit-text-stroke-color:rgba(255,255,255,.45)}
+.wc-item-tag{font-size:clamp(.55rem,.7vw,.68rem);text-transform:uppercase;letter-spacing:.2em;color:rgba(215,226,234,.25);font-family:'Kanit',sans-serif;display:block;margin-bottom:.5rem;transition:color .3s ease}
+.wc-item:hover .wc-item-tag{color:rgba(215,226,234,.5)}
+.wc-item-title{font-size:clamp(1.1rem,2.2vw,2rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;color:#D7E2EA;margin-bottom:.9rem;line-height:1;transition:letter-spacing .35s ease}
+.wc-item:hover .wc-item-title{letter-spacing:.02em}
+.wc-item-desc{font-size:clamp(.78rem,1.2vw,.95rem);font-weight:300;line-height:1.75;color:rgba(215,226,234,.38);transition:color .35s ease;max-width:26rem}
+.wc-item:hover .wc-item-desc{color:rgba(215,226,234,.65)}
+.wc-item-label{display:flex;align-items:center;gap:.55rem;margin-top:1.6rem}
+.wc-item-label-line{width:24px;height:1px;background:rgba(215,226,234,.2);transition:width .4s ease,background .3s ease;flex-shrink:0}
+.wc-item:hover .wc-item-label-line{width:36px;background:rgba(220,100,30,.7)}
+.wc-item-label-text{font-size:clamp(.6rem,.8vw,.75rem);text-transform:uppercase;letter-spacing:.18em;color:rgba(215,226,234,.28);font-family:'Kanit',sans-serif;transition:color .3s ease}
+.wc-item:hover .wc-item-label-text{color:rgba(215,226,234,.65)}
+@media(max-width:640px){.wc-grid{grid-template-columns:1fr;border-radius:1.5rem}.wc-item{border-right:none;border-bottom:1px solid rgba(215,226,234,.08)}.wc-item:nth-child(4){border-bottom:none}.wc-item:nth-child(3){border-bottom:1px solid rgba(215,226,234,.08)}}
+
+/* WHO IT'S FOR — scrolling ticker + detail panel */
+#who{background:#fff;color:#0C0C0C;border-radius:3.5rem 3.5rem 0 0;padding:7rem 0 6rem;position:relative;z-index:7;overflow:hidden}
+.who-inner{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.who-header{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem}
+.who-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(12,12,12,.3);margin-bottom:1.2rem}
+.who-heading{font-size:clamp(2.5rem,5vw,5.5rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.95;color:#0C0C0C}
+.who-body{font-size:clamp(.82rem,1.35vw,1.05rem);font-weight:300;line-height:1.85;color:rgba(12,12,12,.5);align-self:end}
+.who-ticker-wrap{overflow:hidden;border-top:1px solid rgba(12,12,12,.08);border-bottom:1px solid rgba(12,12,12,.08);cursor:default;position:relative;user-select:none}
+.who-ticker{display:flex;width:max-content;animation:ticker-scroll 24s linear infinite}
+.who-ticker-wrap:hover .who-ticker{animation-play-state:paused}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.who-ticker-item{display:flex;align-items:center;gap:1.2rem;padding:clamp(1.2rem,2.5vw,2rem) clamp(1.8rem,3.5vw,3.5rem);border-right:1px solid rgba(12,12,12,.07);white-space:nowrap;cursor:pointer;transition:background .3s ease;position:relative}
+.who-ticker-item:hover{background:rgba(12,12,12,.03)}
+.who-ticker-item.selected{background:#0C0C0C}
+.who-ticker-num{font-size:clamp(1.4rem,3vw,3rem);font-weight:900;color:rgba(12,12,12,.1);letter-spacing:-.04em;line-height:1;transition:color .3s}
+.who-ticker-item:hover .who-ticker-num{color:rgba(12,12,12,.3)}
+.who-ticker-item.selected .who-ticker-num{color:rgba(215,226,234,.18)}
+.who-ticker-name{font-size:clamp(.9rem,2vw,1.5rem);font-weight:700;text-transform:uppercase;color:#0C0C0C;letter-spacing:-.01em;transition:color .3s}
+.who-ticker-item.selected .who-ticker-name{color:#D7E2EA}
+.who-ticker-sep{width:4px;height:4px;border-radius:50%;background:rgba(12,12,12,.15);flex-shrink:0}
+.who-ticker-item.selected .who-ticker-sep{background:rgba(215,226,234,.2)}
+.who-panel{overflow:hidden;max-height:0;transition:max-height .55s cubic-bezier(.22,1,.36,1)}
+.who-panel.visible{max-height:460px}
+.who-panel.dark{background:#0C0C0C}
+.who-panel-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding:clamp(2.5rem,4vw,4rem) clamp(2rem,4vw,4rem);max-width:1100px;margin:0 auto;align-items:start}
+.who-panel-tag{font-size:clamp(.58rem,.75vw,.72rem);text-transform:uppercase;letter-spacing:.2em;margin-bottom:.6rem;display:block;font-family:'Kanit',sans-serif;color:rgba(12,12,12,.3)}
+.who-panel.dark .who-panel-tag{color:rgba(215,226,234,.3)}
+.who-panel-title{font-size:clamp(1.5rem,4vw,4rem);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;color:#0C0C0C;margin-bottom:1rem}
+.who-panel.dark .who-panel-title{color:#D7E2EA}
+.who-panel-desc{font-size:clamp(.82rem,1.35vw,1.05rem);font-weight:300;line-height:1.8;color:rgba(12,12,12,.55)}
+.who-panel.dark .who-panel-desc{color:rgba(215,226,234,.5)}
+.who-panel-right{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-self:center}
+.who-panel-stat-num{font-size:clamp(2rem,5vw,4.5rem);font-weight:900;letter-spacing:-.04em;line-height:1;color:#0C0C0C}
+.who-panel.dark .who-panel-stat-num{background:linear-gradient(180deg,#646973 0%,#BBCCD7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.who-panel-stat-label{font-size:clamp(.62rem,.88vw,.82rem);text-transform:uppercase;letter-spacing:.1em;color:rgba(12,12,12,.35);margin-top:.3rem;font-weight:300;line-height:1.4}
+.who-panel.dark .who-panel-stat-label{color:rgba(215,226,234,.3)}
+@media(max-width:760px){.who-header{grid-template-columns:1fr;gap:2rem;margin-bottom:3rem}.who-panel-inner{grid-template-columns:1fr;gap:2rem}}
+@media(max-width:480px){.who-inner{padding:0 1rem}.who-ticker-item{padding:1rem 1.4rem;gap:.8rem}}
+
+/* TECHNOLOGY — dark */
+#technology{background:#0C0C0C;border-radius:3.5rem 3.5rem 0 0;padding:5rem 2.5rem;position:relative;overflow:hidden;z-index:6}
+#technology::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(118,33,176,.05) 0%,transparent 60%);pointer-events:none}
+.tech-inner{max-width:1100px;margin:0 auto}
+.tech-header{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:end;margin-bottom:5rem}
+.tech-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(215,226,234,.3);margin-bottom:1.2rem}
+.tech-heading{font-size:clamp(2.5rem,7vw,8rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.88;background:linear-gradient(180deg,#646973 0%,#BBCCD7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.tech-body{font-size:clamp(.82rem,1.35vw,1.05rem);font-weight:300;line-height:1.85;color:rgba(215,226,234,.5);align-self:end}
+.tech-strips{display:flex;flex-direction:column;gap:0}
+.tech-strip{display:flex;align-items:center;justify-content:space-between;padding:1.8rem 0;border-top:1px solid rgba(215,226,234,.08);gap:2rem;transition:padding .3s ease,background .3s ease;cursor:default;border-radius:.5rem}
+.tech-strip:last-child{border-bottom:1px solid rgba(215,226,234,.08)}
+.tech-strip:hover{padding-left:1rem;background:rgba(215,226,234,.02)}
+.tech-strip-left{display:flex;align-items:center;gap:1.5rem;flex:1}
+.tech-strip-num{font-size:clamp(.7rem,.9vw,.85rem);font-weight:500;color:rgba(215,226,234,.2);letter-spacing:.1em;min-width:2rem;font-family:'Kanit',sans-serif}
+.tech-strip-title{font-size:clamp(.95rem,1.8vw,1.5rem);font-weight:700;text-transform:uppercase;color:#D7E2EA;letter-spacing:.04em;transition:color .3s ease}
+.tech-strip:hover .tech-strip-title{color:#fff}
+.tech-strip-desc{font-size:clamp(.78rem,1.2vw,.95rem);font-weight:300;color:rgba(215,226,234,.4);max-width:380px;line-height:1.6;text-align:right;transition:color .3s ease}
+.tech-strip:hover .tech-strip-desc{color:rgba(215,226,234,.65)}
+.tech-strip-arrow{font-size:1.2rem;color:rgba(215,226,234,.2);transition:transform .3s ease,color .3s ease;flex-shrink:0}
+.tech-strip:hover .tech-strip-arrow{transform:translateX(6px);color:rgba(215,226,234,.6)}
+@media(max-width:760px){
+  .tech-header{grid-template-columns:1fr;gap:2rem;margin-bottom:3rem}
+  .tech-strip{flex-wrap:wrap;gap:1rem}
+  .tech-strip-desc{text-align:left;max-width:100%}
+}
+
+/* FINAL CTA — dark */
+#final-cta{background:#0C0C0C;border-radius:3.5rem 3.5rem 0 0;padding:4rem 2.5rem 6rem;text-align:center;position:relative;overflow:hidden;z-index:8}
+#final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(118,33,176,.09) 0%,transparent 70%);pointer-events:none}
+.cta-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(215,226,234,.3);margin-bottom:2rem}
+.cta-heading{font-size:clamp(2.5rem,7vw,8.5rem);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.88;background:linear-gradient(180deg,#646973 0%,#BBCCD7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;max-width:900px;margin:0 auto 2.5rem}
+.cta-lines{display:flex;flex-direction:column;gap:.5rem;margin-bottom:2.5rem}
+.cta-line{font-size:clamp(.85rem,1.5vw,1.15rem);font-weight:300;color:rgba(215,226,234,.5);line-height:1.7;letter-spacing:.02em}
+.cta-line strong{color:rgba(215,226,234,.85);font-weight:500}
+.cta-tagline{font-size:clamp(1rem,2vw,1.5rem);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#D7E2EA;margin-bottom:3rem;line-height:1.4}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+@media(max-width:480px){.cta-heading{font-size:clamp(2rem,11vw,4rem)}.cta-tagline{font-size:clamp(.85rem,4vw,1.1rem)}}
 
 /* STATS BAR — ENHANCED */
 #stats{background:#0C0C0C;padding:5rem 2.5rem 5rem;overflow:hidden;position:relative}
@@ -167,20 +280,21 @@ footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226
 .stat-cell:hover{transform:translateY(-6px)}
 
 /* large number */
-.stat-number-wrap{display:flex;align-items:flex-end;justify-content:center;gap:.05em;line-height:1;position:relative}
+.stat-number-wrap{display:flex;align-items:flex-end;justify-content:center;gap:.12em;line-height:1;position:relative}
 .stat-num{
-  font-size:clamp(3.5rem,9vw,9rem);font-weight:900;line-height:1;
+  font-size:clamp(3rem,6.5vw,7rem);font-weight:900;line-height:1;
   color:rgba(255,255,255,.08);
   -webkit-text-stroke:1.5px rgba(255,255,255,.5);
   transition:color .4s ease,-webkit-text-stroke-color .4s ease,text-shadow .4s ease;
-  letter-spacing:-.04em;
+  letter-spacing:.02em;
 }
 .stat-unit{
-  font-size:clamp(1.8rem,4.5vw,4.5rem);font-weight:900;line-height:1.1;
+  font-size:clamp(1.5rem,3.2vw,3.5rem);font-weight:900;line-height:1.1;
   color:rgba(255,255,255,.08);
   -webkit-text-stroke:1.5px rgba(255,255,255,.4);
   transition:color .4s ease,-webkit-text-stroke-color .4s ease;
   padding-bottom:.1em;
+  letter-spacing:.02em;
 }
 .stat-cell:hover .stat-num{
   color:rgba(255,255,255,.95);
@@ -323,8 +437,7 @@ footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226
   .hero-bottom{padding:0 1rem 1.5rem;flex-direction:column;align-items:flex-start;gap:1rem}
   .hero-desc{max-width:100%}
   #stats{padding:3rem 1rem 3rem}
-  #about{padding:4rem 1rem}
-  #services{border-radius:2rem 2rem 0 0;padding:3rem 1rem}
+  #about{padding:5rem 1rem}
   .services-list{max-width:100%}
   .service-item{flex-wrap:wrap;gap:1rem}
   .feat-anim{width:60px;height:60px}
@@ -342,6 +455,50 @@ footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226
   .why-headline{font-size:clamp(2.2rem,10vw,4rem)}
   footer{padding:2.5rem 1rem}
   .projects-heading,.about-heading,.services-heading{font-size:clamp(2.8rem,12vw,6rem)}
+
+  /* ---- PHONE: helmets 1 & 3 bigger, 2 & 4 unchanged ---- */
+  #about .deco{width:clamp(140px,38vw,200px) !important}
+  #about .deco-1{width:clamp(160px,46vw,220px) !important}
+  #about .deco-3{width:clamp(160px,46vw,220px) !important}
+
+  /* ---- PHONE: stats single column, digits never touch ---- */
+  .stats-grid{grid-template-columns:1fr !important}
+  .stat-divider{display:none !important}
+  .stat-cell{
+    border-right:none !important;
+    border-bottom:1px solid rgba(255,255,255,.07) !important;
+    padding:2.2rem 2rem !important;
+    align-items:flex-start !important;
+  }
+  .stat-cell:last-child{border-bottom:none !important}
+  .stat-number-wrap{
+    gap:0.15em !important;
+    align-items:flex-end !important;
+    justify-content:flex-start !important;
+    letter-spacing:0 !important;
+  }
+  .stat-num{
+    font-size:17vw !important;
+    line-height:1 !important;
+    letter-spacing:.02em !important;
+    -webkit-text-stroke-width:1.5px !important;
+  }
+  .stat-unit{
+    font-size:10vw !important;
+    line-height:1.2 !important;
+    letter-spacing:.02em !important;
+    -webkit-text-stroke-width:1px !important;
+    padding-bottom:0.15em !important;
+  }
+  .stat-cell-line{margin:0 0 !important}
+  .stat-desc{
+    font-size:.82rem !important;
+    max-width:100% !important;
+    text-align:left !important;
+  }
+
+  /* ---- PHONE: services needs border-radius ---- */
+  #services{border-radius:2rem 2rem 0 0;padding:3rem 1rem}
 }
 @media(max-width:480px){
   .hero-title{font-size:clamp(2.2rem,14vw,4.5rem)}
@@ -382,7 +539,7 @@ footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226
   <div class="hero-bottom">
     <p class="hero-desc fade-in" data-delay="0.35">The helmet that makes sure safety isn't forgotten</p>
     <div class="fade-in" data-delay="0.5">
-      <button class="btn-contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Join Early Access</button>
+      <button class="btn-contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Demo</button>
     </div>
   </div>
 </section>
@@ -423,24 +580,19 @@ footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226
   </div>
 </section>
 
-<!-- MARQUEE -->
-<section id="marquee">
-  <div class="marquee-row" id="row1"></div>
-  <div class="marquee-row" id="row2"></div>
-</section>
 
 <!-- ABOUT -->
 <section id="about">
-  <img class="deco fade-x-left" data-delay="0.1" src="https://res.cloudinary.com/dajekho84/image/upload/v1781698531/craiyon_174514_image_mm42zn.png" style="top:4%;left:3%;width:clamp(100px,18vw,287px)">
-  <img class="deco fade-x-left" data-delay="0.25" src="https://res.cloudinary.com/dajekho84/image/upload/v1781700008/ChatGPT_Image_Jun_17_2026_06_09_53_PM_mou1z9.png" style="bottom:8%;left:6%;width:clamp(90px,18vw,275px)">
-  <img class="deco fade-x-right" data-delay="0.15" src="https://res.cloudinary.com/dajekho84/image/upload/v1781699358/craiyon_175810_image_ojtzwu.png" style="top:4%;right:3%;width:clamp(92px,18vw,290px)">
-  <img class="deco fade-x-right" data-delay="0.3" src="https://res.cloudinary.com/dajekho84/image/upload/v1781699376/craiyon_175926_image_u9vqsx.png" style="bottom:8%;right:6%;width:clamp(90px,15vw,220px)">
+  <img class="deco deco-1 fade-x-left" data-delay="0.1" src="https://res.cloudinary.com/dajekho84/image/upload/v1781698531/craiyon_174514_image_mm42zn.png" style="top:4%;left:3%;width:clamp(100px,18vw,287px)">
+  <img class="deco deco-2 fade-x-left" data-delay="0.25" src="https://res.cloudinary.com/dajekho84/image/upload/v1781700008/ChatGPT_Image_Jun_17_2026_06_09_53_PM_mou1z9.png" style="bottom:8%;left:6%;width:clamp(90px,18vw,275px)">
+  <img class="deco deco-3 fade-x-right" data-delay="0.15" src="https://res.cloudinary.com/dajekho84/image/upload/v1781699358/craiyon_175810_image_ojtzwu.png" style="top:4%;right:3%;width:clamp(92px,18vw,290px)">
+  <img class="deco deco-4 fade-x-right" data-delay="0.3" src="https://res.cloudinary.com/dajekho84/image/upload/v1781699376/craiyon_175926_image_u9vqsx.png" style="bottom:8%;right:6%;width:clamp(90px,15vw,220px)">
 
   <div style="display:flex;flex-direction:column;align-items:center;gap:clamp(1.5rem,3vw,3rem);position:relative;z-index:2">
     <h2 class="about-heading hero-heading fade-in" data-delay="0">Our Mission</h2>
     <p class="about-text" id="about-text"></p>
     <div class="fade-in" data-delay="0.3">
-      <button class="btn-contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Join Early Access</button>
+      <button class="btn-contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Explore the Helmet</button>
     </div>
   </div>
 </section>
@@ -661,211 +813,280 @@ footer{background:#0C0C0C;text-align:center;padding:3rem 2rem;color:rgba(215,226
   </div>
 </section>
 
+<!-- WHY PALAVITA -->
+<section id="why-palavita">
+  <div class="why-inner">
+    <div class="fade-in" data-delay="0">
+      <p class="why-eyebrow">Why PalaVita</p>
+      <h2 class="why-big-heading">Prevention<br>Before<br>Protection.</h2>
+    </div>
+    <div class="fade-in" data-delay="0.15">
+      <h3 class="why-sub-heading">The safest accident is always the one that never happens.</h3>
+      <p class="why-body">Traditional helmets are designed to reduce injury after an accident has already occurred. PalaVita takes a different approach. By actively detecting unsafe riding conditions, reminding riders to secure their helmet correctly, and monitoring safety throughout every journey, it helps prevent avoidable mistakes before they become life-changing consequences.</p>
+      <p class="why-quote">Because the safest accident is always the one that never happens.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE PALAVITA -->
+<section id="why-choose">
+  <div class="wc-heading-wrap fade-in" data-delay="0">
+    <p class="wc-eyebrow">Why Choose PalaVita</p>
+    <h2 class="wc-heading">Active Safety<br>That Rides With You.</h2>
+    <p class="wc-sub">PalaVita goes beyond passive protection by actively encouraging safer riding habits every time you ride.</p>
+  </div>
+  <div class="wc-grid fade-in" data-delay="0.1">
+    <div class="wc-item">
+      <span class="wc-item-num">01</span>
+      <span class="wc-item-tag">Continuous</span>
+      <div class="wc-item-title">Active Monitoring</div>
+      <p class="wc-item-desc">Continuously checks critical safety conditions throughout the entire ride — not just at the start. Strap status, helmet presence, motion patterns — monitored every second.</p>
+      <div class="wc-item-label"><span class="wc-item-label-line"></span><span class="wc-item-label-text">Always On</span></div>
+    </div>
+    <div class="wc-item">
+      <span class="wc-item-num">02</span>
+      <span class="wc-item-tag">Real-Time</span>
+      <div class="wc-item-title">Intelligent Detection</div>
+      <p class="wc-item-desc">Identifies unsecured helmet straps, improper helmet usage, and abnormal riding events the moment they occur — so alerts are always meaningful, never noise.</p>
+      <div class="wc-item-label"><span class="wc-item-label-line"></span><span class="wc-item-label-text">Zero Lag</span></div>
+    </div>
+    <div class="wc-item">
+      <span class="wc-item-num">03</span>
+      <span class="wc-item-tag">Immediate</span>
+      <div class="wc-item-title">Instant Alerts</div>
+      <p class="wc-item-desc">Provides immediate, unmissable audible feedback the moment an unsafe condition is detected. No app. No phone. Just a direct signal that prompts the rider to act.</p>
+      <div class="wc-item-label"><span class="wc-item-label-line"></span><span class="wc-item-label-text">No App Needed</span></div>
+    </div>
+    <div class="wc-item">
+      <span class="wc-item-num">04</span>
+      <span class="wc-item-tag">Proactive</span>
+      <div class="wc-item-title">Built for Prevention</div>
+      <p class="wc-item-desc">Shifts safety from reactive to proactive. Traditional helmets protect during impact. PalaVita acts before the impact ever happens — because the safest accident is the one that never occurs.</p>
+      <div class="wc-item-label"><span class="wc-item-label-line"></span><span class="wc-item-label-text">Prevention First</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+  <div class="tech-inner">
+    <div class="tech-header">
+      <div class="fade-in" data-delay="0">
+        <p class="tech-eyebrow">Technology</p>
+        <h2 class="tech-heading">Engineered for Everyday Riding.</h2>
+      </div>
+      <p class="tech-body fade-in" data-delay="0.15">Every component inside PalaVita is designed with one purpose — helping riders stay safer without changing the way they ride. Embedded sensors continuously monitor helmet usage, chin strap status, rider movement, and impact patterns while intelligent firmware processes every event in real time. The result is a smart helmet that actively supports safer decisions before, during, and after every journey.</p>
+    </div>
+    <div class="tech-strips">
+      <div class="tech-strip fade-in" data-delay="0">
+        <div class="tech-strip-left">
+          <span class="tech-strip-num">01</span>
+          <span class="tech-strip-title">Embedded Sensors</span>
+        </div>
+        <span class="tech-strip-desc">Continuously monitor helmet usage, chin strap status, and rider movement</span>
+        <span class="tech-strip-arrow">→</span>
+      </div>
+      <div class="tech-strip fade-in" data-delay="0.05">
+        <div class="tech-strip-left">
+          <span class="tech-strip-num">02</span>
+          <span class="tech-strip-title">Intelligent Firmware</span>
+        </div>
+        <span class="tech-strip-desc">Processes every safety event in real time with minimal latency</span>
+        <span class="tech-strip-arrow">→</span>
+      </div>
+      <div class="tech-strip fade-in" data-delay="0.1">
+        <div class="tech-strip-left">
+          <span class="tech-strip-num">03</span>
+          <span class="tech-strip-title">Impact Detection Logic</span>
+        </div>
+        <span class="tech-strip-desc">Analyses motion and impact patterns to identify potential accident events</span>
+        <span class="tech-strip-arrow">→</span>
+      </div>
+      <div class="tech-strip fade-in" data-delay="0.15">
+        <div class="tech-strip-left">
+          <span class="tech-strip-num">04</span>
+          <span class="tech-strip-title">Audible Alert System</span>
+        </div>
+        <span class="tech-strip-desc">Delivers immediate feedback the moment an unsafe condition is detected</span>
+        <span class="tech-strip-arrow">→</span>
+      </div>
+      <div class="tech-strip fade-in" data-delay="0.2">
+        <div class="tech-strip-left">
+          <span class="tech-strip-num">05</span>
+          <span class="tech-strip-title">Compact Architecture</span>
+        </div>
+        <span class="tech-strip-desc">All components integrated into a single helmet platform — no external devices needed</span>
+        <span class="tech-strip-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who">
+  <div class="who-inner">
+    <div class="who-header">
+      <div class="fade-in" data-delay="0">
+        <p class="who-eyebrow">Who It's For</p>
+        <h2 class="who-heading">Built for Every Rider.</h2>
+      </div>
+      <p class="who-body fade-in" data-delay="0.15">Whether you're commuting to work, riding to college, delivering orders, managing a fleet, or leading road safety initiatives, PalaVita adapts to your needs. Click any rider type to explore.</p>
+    </div>
+  </div>
+  <div class="who-ticker-wrap fade-in" data-delay="0.1">
+    <div class="who-ticker" id="whoTicker">
+      <div class="who-ticker-item" data-idx="0"><span class="who-ticker-num">01</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Daily Commuters</span></div>
+      <div class="who-ticker-item" data-idx="1"><span class="who-ticker-num">02</span><span class="who-ticker-sep"></span><span class="who-ticker-name">College Riders</span></div>
+      <div class="who-ticker-item" data-idx="2"><span class="who-ticker-num">03</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Delivery Riders</span></div>
+      <div class="who-ticker-item" data-idx="3"><span class="who-ticker-num">04</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Fleet Managers</span></div>
+      <div class="who-ticker-item" data-idx="4"><span class="who-ticker-num">05</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Schools &amp; Colleges</span></div>
+      <div class="who-ticker-item" data-idx="5"><span class="who-ticker-num">06</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Safety Authorities</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="who-ticker-item" data-idx="0"><span class="who-ticker-num">01</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Daily Commuters</span></div>
+      <div class="who-ticker-item" data-idx="1"><span class="who-ticker-num">02</span><span class="who-ticker-sep"></span><span class="who-ticker-name">College Riders</span></div>
+      <div class="who-ticker-item" data-idx="2"><span class="who-ticker-num">03</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Delivery Riders</span></div>
+      <div class="who-ticker-item" data-idx="3"><span class="who-ticker-num">04</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Fleet Managers</span></div>
+      <div class="who-ticker-item" data-idx="4"><span class="who-ticker-num">05</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Schools &amp; Colleges</span></div>
+      <div class="who-ticker-item" data-idx="5"><span class="who-ticker-num">06</span><span class="who-ticker-sep"></span><span class="who-ticker-name">Safety Authorities</span></div>
+    </div>
+  </div>
+  <div class="who-panel" id="whoPanel">
+    <div class="who-panel-inner" id="whoPanelInner">
+      <div class="who-panel-left">
+        <span class="who-panel-tag" id="whoPanelTag"></span>
+        <div class="who-panel-title" id="whoPanelTitle"></div>
+        <p class="who-panel-desc" id="whoPanelDesc"></p>
+      </div>
+      <div class="who-panel-right" id="whoPanelStats"></div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS / APPLICATIONS -->
 <section id="projects">
   <h2 class="projects-heading hero-heading">Applications</h2>
   <div class="use-cases">
 
-    <!-- 01 Delivery Fleet Safety -->
+    <!-- 01 The Everyday Rider -->
     <div class="uc-card fade-in" data-delay="0">
       <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Delivery Fleet Safety" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=800&q=80&auto=format&fit=crop" alt="The Everyday Rider" loading="lazy">
       </div>
       <div class="uc-body">
         <div class="uc-num">01</div>
         <div class="uc-cat">Use Case</div>
+        <div class="uc-title">The Everyday Rider</div>
+        <p class="uc-desc">Whether commuting to work or riding to college, small mistakes happen every day. A forgotten strap, a helmet worn loose, a motorcycle started before safety is confirmed. PalaVita detects unsecured chin straps, activates audible alerts before the journey begins, and continues alerting until the issue is resolved — no override, no snooze. Because every ride, however routine, is only as safe as the rider who starts it.</p>
+        <div class="uc-tags">
+          <span class="uc-tag">Strap Detection</span>
+          <span class="uc-tag">Pre-Ride Alert</span>
+          <span class="uc-tag">Persistent Compliance</span>
+          <span class="uc-tag">Daily Safety</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Delivery Fleet Safety -->
+    <div class="uc-card fade-in" data-delay="0.05">
+      <div class="uc-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Delivery Fleet Safety" loading="lazy">
+      </div>
+      <div class="uc-body">
+        <div class="uc-num">02</div>
+        <div class="uc-cat">Use Case</div>
         <div class="uc-title">Delivery Fleet Safety</div>
-        <p class="uc-desc">Delivery riders operate under constant time pressure. A rider in a hurry begins moving while the helmet is not being worn. PalaVita detects motorcycle movement and the absence of helmet usage simultaneously — activating immediate warning alerts to encourage proper compliance before the journey continues. Safety that works even when time doesn't wait.</p>
+        <p class="uc-desc">Delivery riders operate under constant time pressure — making them the most likely to skip safety steps. PalaVita detects motorcycle movement and absent helmet usage simultaneously, activating immediate warnings before the journey continues. Safety compliance that works even when time doesn't wait, without requiring any conscious effort from the rider.</p>
         <div class="uc-tags">
           <span class="uc-tag">Helmet Wear Detection</span>
           <span class="uc-tag">Movement Monitoring</span>
           <span class="uc-tag">Fleet Safety</span>
           <span class="uc-tag">Active Alerts</span>
         </div>
-
       </div>
     </div>
 
-    <!-- 02 The Student -->
+    <!-- 03 Accident Awareness -->
     <div class="uc-card fade-in" data-delay="0.05">
       <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80&auto=format&fit=crop" alt="The Student" loading="lazy">
-      </div>
-      <div class="uc-body">
-        <div class="uc-num">02</div>
-        <div class="uc-cat">Use Case</div>
-        <div class="uc-title">The Student</div>
-        <p class="uc-desc">A student leaves for college and forgets to fasten the helmet strap. PalaVita detects the unsecured chin strap and activates an audible alert before the journey continues — prompting the rider to correct the issue in seconds. A simple reminder. A potentially important correction that takes no effort but could change everything.</p>
-        <div class="uc-tags">
-          <span class="uc-tag">Strap Detection</span>
-          <span class="uc-tag">Buzzer Alert</span>
-          <span class="uc-tag">Pre-Ride Safety</span>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 03 The Daily Commute -->
-    <div class="uc-card fade-in" data-delay="0.05">
-      <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=800&q=80&auto=format&fit=crop" alt="The Daily Commute" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=800&q=80&auto=format&fit=crop" alt="Accident Awareness" loading="lazy">
       </div>
       <div class="uc-body">
         <div class="uc-num">03</div>
         <div class="uc-cat">Use Case</div>
-        <div class="uc-title">The Daily Commute</div>
-        <p class="uc-desc">A rider starts the motorcycle before fully securing the helmet correctly. The alert activates immediately and continues until the safety issue is addressed — no override, no snooze. Because protection should never be optional, not even on a routine ride that feels entirely harmless. Every commute is only as safe as the rider who starts it.</p>
-        <div class="uc-tags">
-          <span class="uc-tag">Strap Detection</span>
-          <span class="uc-tag">Persistent Alert</span>
-          <span class="uc-tag">Rider Compliance</span>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 04 The Unexpected Accident -->
-    <div class="uc-card fade-in" data-delay="0.05">
-      <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=800&q=80&auto=format&fit=crop" alt="The Unexpected Accident" loading="lazy">
-      </div>
-      <div class="uc-body">
-        <div class="uc-num">04</div>
-        <div class="uc-cat">Use Case</div>
-        <div class="uc-title">The Unexpected Accident</div>
-        <p class="uc-desc">Road accidents happen without warning. An abnormal impact event occurs during a ride — PalaVita continuously monitors motion patterns and detects the unusual forces consistent with a crash. The system identifies the event and initiates accident awareness protocols immediately. Because in an emergency, every second of awareness matters and faster response can make all the difference.</p>
+        <div class="uc-title">Accident Awareness</div>
+        <p class="uc-desc">Road accidents happen without warning. PalaVita continuously monitors motion patterns and detects the unusual forces consistent with a crash — identifying the event and initiating awareness protocols immediately. Because in an emergency, every second matters and faster recognition can make all the difference between a close call and a life-changing consequence.</p>
         <div class="uc-tags">
           <span class="uc-tag">Accident Detection</span>
           <span class="uc-tag">Impact Monitoring</span>
           <span class="uc-tag">Motion Analysis</span>
           <span class="uc-tag">Emergency Protocol</span>
         </div>
-
       </div>
     </div>
 
-    <!-- 05 Youth Rider Awareness -->
+    <!-- 04 Youth & Education -->
     <div class="uc-card fade-in" data-delay="0.05">
       <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80&auto=format&fit=crop" alt="Youth Rider Awareness" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80&auto=format&fit=crop" alt="Youth & Education" loading="lazy">
       </div>
       <div class="uc-body">
-        <div class="uc-num">05</div>
+        <div class="uc-num">04</div>
         <div class="uc-cat">Use Case</div>
-        <div class="uc-title">Youth Rider Awareness</div>
-        <p class="uc-desc">Young and first-time riders are most vulnerable to overlooking safety steps. PalaVita promotes better safety habits from the very first ride — detecting strap status, confirming helmet usage, and reinforcing correct behaviour through real-time alerts. Building a culture of safety starts before the first mistake ever happens. The right habits formed early last a lifetime.</p>
+        <div class="uc-title">Youth & Education</div>
+        <p class="uc-desc">Young and first-time riders are most vulnerable to overlooking safety steps. PalaVita promotes correct habits from the very first ride — detecting strap status, confirming helmet usage, and reinforcing safe behaviour through real-time alerts. Schools, colleges, and training programs can deploy PalaVita as a tangible tool to build a culture of safety before the first mistake ever happens.</p>
         <div class="uc-tags">
           <span class="uc-tag">Youth Safety</span>
           <span class="uc-tag">Habit Formation</span>
           <span class="uc-tag">Educational Institutions</span>
           <span class="uc-tag">First-Time Riders</span>
         </div>
-
       </div>
     </div>
 
-    <!-- 06 Enterprise Compliance -->
+    <!-- 05 Enterprise & Government -->
     <div class="uc-card fade-in" data-delay="0.05">
       <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&q=80&auto=format&fit=crop" alt="Enterprise Compliance" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80&auto=format&fit=crop" alt="Enterprise & Government" loading="lazy">
       </div>
       <div class="uc-body">
-        <div class="uc-num">06</div>
+        <div class="uc-num">05</div>
         <div class="uc-cat">Use Case</div>
-        <div class="uc-title">Enterprise Compliance</div>
-        <p class="uc-desc">Organizations managing transportation teams need practical tools for rider safety compliance at scale. PalaVita provides an active safety system that reinforces standards across entire fleets — detecting unsafe behaviour, issuing real-time alerts, and creating a culture of accountability. From enterprise transportation teams to logistics operations, safety compliance becomes built-in, not bolted on.</p>
+        <div class="uc-title">Enterprise & Government</div>
+        <p class="uc-desc">Organizations managing transportation teams and government bodies running public safety campaigns need scalable, practical tools for rider compliance. PalaVita reinforces standards across fleets, enterprise operations, and road safety initiatives — making compliance built-in rather than bolted on. From logistics operators to national safety authorities, active prevention at every level.</p>
         <div class="uc-tags">
-          <span class="uc-tag">Enterprise Safety</span>
+          <span class="uc-tag">Enterprise Compliance</span>
           <span class="uc-tag">Fleet Management</span>
-          <span class="uc-tag">Compliance Standards</span>
-          <span class="uc-tag">Transportation Teams</span>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 07 Government & Public Safety -->
-    <div class="uc-card fade-in" data-delay="0.05">
-      <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80&auto=format&fit=crop" alt="Government & Public Safety" loading="lazy">
-      </div>
-      <div class="uc-body">
-        <div class="uc-num">07</div>
-        <div class="uc-cat">Use Case</div>
-        <div class="uc-title">Government & Public Safety</div>
-        <p class="uc-desc">Government agencies, transportation authorities, and road safety organizations require scalable solutions for public rider compliance programs. PalaVita supports broader road safety initiatives focused on prevention and awareness — providing a practical, deployable tool for campaigns that reduce accidents before they occur. Active safety compliance at a population level, starting with every individual rider.</p>
-        <div class="uc-tags">
           <span class="uc-tag">Government Partnership</span>
           <span class="uc-tag">Public Safety Campaigns</span>
-          <span class="uc-tag">Road Safety Organizations</span>
-          <span class="uc-tag">Prevention Focus</span>
         </div>
-
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <p class="cta-eyebrow fade-in" data-delay="0">Every Ride Starts With One Choice</p>
+  <h2 class="cta-heading fade-in" data-delay="0.1">Ride Smarter.<br>Ride Safer.<br>Ride with PalaVita.</h2>
+  <div class="cta-lines fade-in" data-delay="0.2">
+    <p class="cta-line">Wearing a helmet is important.</p>
+    <p class="cta-line"><strong>Wearing it correctly is what saves lives.</strong></p>
+    <p class="cta-line">PalaVita makes sure that safety isn't left to memory, habit, or chance.</p>
+  </div>
+  <div class="cta-buttons fade-in" data-delay="0.3">
+    <button class="btn-contact" onclick="window.location='mailto:hello@palavita.com'">Get in Touch</button>
+  </div>
+</section>
+
 <!-- CONTACT / FOOTER -->
 <footer id="contact">
-  <p style="font-size:clamp(1rem,3vw,1.5rem);font-weight:700;color:#D7E2EA;margin-bottom:1.2rem;text-transform:uppercase;letter-spacing:.1em">Join us in building a culture of safer riding</p>
-  <button class="btn-contact" style="margin-bottom:2rem" onclick="window.location='mailto:hello@palavita.com'">Join Early Access</button>
+  <p style="font-size:clamp(.85rem,1.3vw,1rem);font-weight:500;color:rgba(215,226,234,.5);margin-bottom:.5rem;letter-spacing:.08em;text-transform:uppercase">PalaVita Smart Helmet</p>
+  <p style="font-size:clamp(.75rem,1.1vw,.9rem);font-weight:300;color:rgba(215,226,234,.25);margin-bottom:1.5rem;text-transform:none;font-style:italic;letter-spacing:.04em">Because the smallest safety mistake should never become the biggest regret.</p>
   <p>&copy; PalaVita. All Rights Reserved.</p>
 </footer>
 
 <script>
-/* ---- MARQUEE DATA ---- */
-const allGifs=[
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638339/Screenshot_2026-06-17_010113_gryl9v.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638487/Screenshot_2026-06-17_010422_vhi70k.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638134/Screenshot_2026-06-17_005803_c9qna7.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638239/Screenshot_2026-06-17_010012_xbnnmy.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638487/Screenshot_2026-06-17_010422_vhi70k.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638339/Screenshot_2026-06-17_010113_gryl9v.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638239/Screenshot_2026-06-17_010012_xbnnmy.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638134/Screenshot_2026-06-17_005803_c9qna7.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638339/Screenshot_2026-06-17_010113_gryl9v.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638487/Screenshot_2026-06-17_010422_vhi70k.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638134/Screenshot_2026-06-17_005803_c9qna7.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638239/Screenshot_2026-06-17_010012_xbnnmy.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638487/Screenshot_2026-06-17_010422_vhi70k.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638339/Screenshot_2026-06-17_010113_gryl9v.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638239/Screenshot_2026-06-17_010012_xbnnmy.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638134/Screenshot_2026-06-17_005803_c9qna7.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638339/Screenshot_2026-06-17_010113_gryl9v.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638487/Screenshot_2026-06-17_010422_vhi70k.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638134/Screenshot_2026-06-17_005803_c9qna7.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638239/Screenshot_2026-06-17_010012_xbnnmy.png",
-"https://res.cloudinary.com/dajekho84/image/upload/v1781638487/Screenshot_2026-06-17_010422_vhi70k.png"
-];
-const row1Src=allGifs.slice(0,11);
-const row2Src=allGifs.slice(11);
-
-function buildRow(el,srcs){
-  const triple=[...srcs,...srcs,...srcs];
-  triple.forEach(s=>{
-    const img=document.createElement('img');
-    img.src=s;img.loading='lazy';img.alt='';
-    el.appendChild(img);
-  });
-}
-buildRow(document.getElementById('row1'),row1Src);
-buildRow(document.getElementById('row2'),row2Src);
-
-const marqueeSection=document.getElementById('marquee');
-const r1=document.getElementById('row1');
-const r2=document.getElementById('row2');
-
-function updateMarquee(){
-  const rect=marqueeSection.getBoundingClientRect();
-  const offset=(window.scrollY - (window.scrollY+rect.top-window.innerHeight) + window.innerHeight) * 0.3;
-  r1.style.transform=`translateX(${offset - 200}px)`;
-  r2.style.transform=`translateX(${-(offset - 200)}px)`;
-}
-window.addEventListener('scroll',updateMarquee,{passive:true});
-updateMarquee();
-
 /* ---- ABOUT TEXT ANIMATION ---- */
 const aboutStr="Most road accidents do not begin with reckless intentions. They begin with overlooked details. A loose chin strap. A helmet worn incorrectly. A quick ride that feels harmless. PalaVita was built to help riders recognize and correct these mistakes before they become serious risks. Because protection only works when it is worn properly.";
 const textEl=document.getElementById('about-text');
@@ -909,6 +1130,69 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:0,rootMargin:'0px 0px -40px 0px'});
 fadeEls.forEach(el=>observer.observe(el));
+
+/* ---- WHY CHOOSE — cursor spotlight per cell ---- */
+const wcSection = document.getElementById('why-choose');
+if(wcSection){
+  wcSection.addEventListener('mousemove', e => {
+    const r = wcSection.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%';
+    const y = ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
+    wcSection.style.setProperty('--cx', x);
+    wcSection.style.setProperty('--cy', y);
+  });
+  document.querySelectorAll('.wc-item').forEach(item => {
+    item.addEventListener('mousemove', e => {
+      const r = item.getBoundingClientRect();
+      item.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      item.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    });
+  });
+}
+
+/* ---- WHO TICKER + PANEL ---- */
+const whoData = [
+  { tag:'Individual', title:'Daily Commuters', desc:'Riders who commute to work every day need a safety system that works quietly in the background — every single ride, without requiring conscious effort. PalaVita detects whether the strap is secured, monitors movement, and alerts before the journey even starts.', s1n:'Every ride', s1l:'Safety checks run automatically', s2n:'0 sec', s2l:'Extra setup time required', dark:false },
+  { tag:'Students', title:'College Riders', desc:'Young riders forming safety habits for life. PalaVita ensures the basics are never overlooked, even on the quickest trips to campus. The habits built early — fastening the strap, wearing it correctly — are the habits that last.', s1n:'1st ride', s1l:'Correct habits begin here', s2n:'40%', s2l:'Lower death risk with correct use', dark:false },
+  { tag:'Fleet', title:'Delivery Riders', desc:'Riders operating under time pressure are most likely to skip safety steps. PalaVita detects movement without a helmet and activates alerts immediately — encouraging compliance even when the next delivery can\'t wait.', s1n:'Real-time', s1l:'Alerts on unsafe movement', s2n:'No app', s2l:'Fully embedded — works out of the box', dark:true },
+  { tag:'Enterprise', title:'Fleet Managers', desc:'Organizations managing transportation teams gain a practical, scalable tool to enforce rider safety standards across entire operations — without relying on manual oversight or situational enforcement.', s1n:'Scalable', s1l:'Across fleets of any size', s2n:'Built-in', s2l:'Compliance — not bolted on', dark:true },
+  { tag:'Institutions', title:'Schools & Colleges', desc:'Educational institutions can promote a culture of road safety among young riders from the very first ride. PalaVita provides a tangible tool to enforce correct helmet usage actively on campuses and in training programs.', s1n:'Culture', s1l:'Of safety built from day one', s2n:'Active', s2l:'Not passive — prevention-first', dark:false },
+  { tag:'Government', title:'Safety Authorities', desc:'Government agencies and road safety organizations can deploy PalaVita as part of broader public awareness campaigns — a practical, deployable tool that supports prevention at population scale.', s1n:'1.5L', s1l:'Road deaths annually — PalaVita targets this', s2n:'Prevention', s2l:'Not just awareness — active compliance', dark:true }
+];
+
+const whoPanel = document.getElementById('whoPanel');
+const whoPanelTag = document.getElementById('whoPanelTag');
+const whoPanelTitle = document.getElementById('whoPanelTitle');
+const whoPanelDesc = document.getElementById('whoPanelDesc');
+const whoPanelStats = document.getElementById('whoPanelStats');
+let activeIdx = -1;
+
+function openWhoPanel(idx) {
+  if (activeIdx === idx) {
+    // close
+    whoPanel.classList.remove('visible','dark');
+    document.querySelectorAll('.who-ticker-item').forEach(i => i.classList.remove('selected'));
+    activeIdx = -1;
+    return;
+  }
+  activeIdx = idx;
+  const d = whoData[idx];
+  whoPanelTag.textContent = d.tag;
+  whoPanelTitle.textContent = d.title;
+  whoPanelDesc.textContent = d.desc;
+  whoPanelStats.innerHTML = `
+    <div class="who-panel-stat"><div class="who-panel-stat-num">${d.s1n}</div><div class="who-panel-stat-label">${d.s1l}</div></div>
+    <div class="who-panel-stat"><div class="who-panel-stat-num">${d.s2n}</div><div class="who-panel-stat-label">${d.s2l}</div></div>`;
+  whoPanel.classList.toggle('dark', d.dark);
+  whoPanel.classList.add('visible');
+  document.querySelectorAll('.who-ticker-item').forEach(i => {
+    i.classList.toggle('selected', parseInt(i.dataset.idx) === idx);
+  });
+}
+
+document.querySelectorAll('.who-ticker-item').forEach(item => {
+  item.addEventListener('click', () => openWhoPanel(parseInt(item.dataset.idx)));
+});
 
 /* ---- COUNTER ANIMATION — stats section ---- */
 function animateCounter(el){
