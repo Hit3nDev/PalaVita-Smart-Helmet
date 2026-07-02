@@ -424,82 +424,105 @@ footer{background:#0C0C0C;text-align:center;padding:5rem 2rem 3rem;color:rgba(21
 }
 
 /* ARTICLES / IN THE NEWS */
-#articles{background:#0C0C0C;padding:5rem 0 4rem;position:relative;overflow:hidden}
-.articles-inner{max-width:1400px;margin:0 auto;padding:0 2.5rem}
-.articles-header{margin-bottom:3rem}
-.articles-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(215,226,234,.3);margin-bottom:1rem;font-family:'Kanit',sans-serif}
-.articles-heading{font-size:clamp(1.8rem,4vw,4rem);font-weight:900;line-height:1.05;color:#D7E2EA;max-width:480px;margin-bottom:.8rem}
+#articles{background:#0C0C0C;padding:5rem 0 5rem;position:relative;overflow:visible}
+.articles-inner{max-width:1400px;margin:0 auto;padding:0 2.5rem;margin-bottom:2.5rem}
+.articles-header{margin-bottom:2.5rem}
+.articles-eyebrow{font-size:clamp(.6rem,.82vw,.78rem);text-transform:uppercase;letter-spacing:.22em;color:rgba(215,226,234,.3);margin-bottom:.75rem;font-family:'Kanit',sans-serif}
+.articles-heading{font-size:clamp(2rem,4.5vw,5rem);font-weight:900;line-height:.92;color:#D7E2EA;max-width:800px;text-transform:uppercase;letter-spacing:-.03em;font-family:'Kanit',sans-serif}
 .articles-sub{font-size:clamp(.8rem,1.2vw,.95rem);font-weight:300;color:rgba(215,226,234,.4);max-width:420px;line-height:1.7}
 
 /* horizontal scroll row */
-.articles-row{display:flex;gap:1.2rem;overflow-x:auto;padding:0 2.5rem 1.5rem;scrollbar-width:none;-ms-overflow-style:none;cursor:grab}
+.articles-row-wrap{overflow-x:hidden;width:100%}
+.articles-row{display:flex;gap:1.2rem;overflow-x:auto;padding:0 2.5rem 2.5rem;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;align-items:flex-start;margin-top:2rem}
 .articles-row::-webkit-scrollbar{display:none}
 .articles-row:active{cursor:grabbing}
 .articles-row::after{content:'';flex-shrink:0;width:2.5rem}
 
-/* each card */
+/* ARTICLE CARDS */
 .art-card{
-  flex-shrink:0;width:clamp(260px,28vw,340px);
-  border:1px solid rgba(215,226,234,.08);border-radius:1.4rem;
+  flex:0 0 clamp(260px,28vw,340px);
+  width:clamp(260px,28vw,340px);
+  height:380px;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+  position:relative;
+  border-radius:1.4rem;
+  overflow:hidden;
+  border:1px solid rgba(215,226,234,.08);
   background:#0C0C0C;
-  display:flex;flex-direction:column;
-  overflow:hidden;position:relative;
   transition:border-color .35s ease,transform .4s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;
-  cursor:pointer;text-decoration:none;
 }
-.art-card:hover{border-color:rgba(215,226,234,.22);transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,.6)}
-
-/* thumbnail */
+.art-card:hover{border-color:rgba(215,226,234,.22);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.6)}
 .art-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;background:rgba(12,12,12,.9);flex-shrink:0}
-.art-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
-.art-card:hover .art-thumb img{transform:scale(1.06)}
+.art-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.art-card:hover .art-thumb img{transform:scale(1.05)}
 .art-thumb-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.art-thumb-stat{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1.5px rgba(215,226,234,.35);text-align:center;line-height:1;padding:0 .5rem}
-.art-thumb-tint{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,12,12,.05) 0%,rgba(12,12,12,.5) 100%);pointer-events:none}
-
-/* video thumb */
+.art-thumb-tint{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,12,12,.05) 0%,rgba(12,12,12,.55) 100%);pointer-events:none}
 .art-thumb-video{background:linear-gradient(135deg,rgba(220,100,30,.15) 0%,rgba(118,33,176,.12) 100%)}
-.art-play-btn{width:48px;height:48px;border-radius:50%;background:rgba(220,100,30,.2);border:1.5px solid rgba(220,100,30,.5);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s}
-.art-card:hover .art-play-btn{background:rgba(220,100,30,.4);transform:scale(1.1)}
+.art-play-btn{width:48px;height:48px;border-radius:50%;background:rgba(220,100,30,.2);border:1.5px solid rgba(220,100,30,.5);display:flex;align-items:center;justify-content:center}
 .art-play-btn svg{width:16px;height:16px;fill:rgba(255,255,255,.9);margin-left:3px}
 
-/* FRONT — source + headline only, fades out on hover */
-.art-front{padding:1rem 1.2rem 1.2rem;display:flex;flex-direction:column;gap:.6rem;position:relative;z-index:1;transition:opacity .25s ease}
-.art-card:hover .art-front{opacity:0;pointer-events:none}
+/* front — always visible */
+.art-front{padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem;position:relative;z-index:1}
 .art-label{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
 .art-label-dot{width:5px;height:5px;border-radius:50%;background:rgba(220,100,30,.9);flex-shrink:0}
 .art-label-source{font-size:clamp(.55rem,.7vw,.65rem);font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:rgba(220,100,30,.9);font-family:'Kanit',sans-serif}
 .art-label-type{font-size:clamp(.55rem,.7vw,.65rem);text-transform:uppercase;letter-spacing:.14em;color:rgba(215,226,234,.28);font-family:'Kanit',sans-serif}
-.art-title{font-size:clamp(.82rem,1.3vw,1rem);font-weight:600;color:#D7E2EA;line-height:1.45;letter-spacing:.01em}
+.art-title{font-size:clamp(.82rem,1.3vw,.98rem);font-weight:600;color:#D7E2EA;line-height:1.45}
 
-/* HOVER OVERLAY — fades in over the full card */
-.art-hover{
+/* hover overlay — fades over entire card */
+.art-hover-overlay{
   position:absolute;
-  top:0;left:0;right:0;bottom:0;
-  background:rgba(10,10,10,.96);
+  inset:0;
+  background:rgba(10,10,10,.97);
   padding:1.3rem;
-  display:flex;flex-direction:column;gap:.65rem;
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
   opacity:0;
   pointer-events:none;
   transition:opacity .3s ease;
-  z-index:4;
+  z-index:10;
 }
-.art-card:hover .art-hover{opacity:1;pointer-events:auto}
-.art-hover-source{display:flex;align-items:center;gap:.45rem}
-.art-hover-dot{width:5px;height:5px;border-radius:50%;background:rgba(220,100,30,.9);flex-shrink:0}
-.art-hover-label{font-size:clamp(.55rem,.7vw,.65rem);font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:rgba(220,100,30,.85);font-family:'Kanit',sans-serif}
-.art-hover-title{font-size:clamp(.8rem,1.2vw,.95rem);font-weight:600;color:#D7E2EA;line-height:1.4}
-.art-hover-desc{font-size:clamp(.72rem,1.1vw,.83rem);font-weight:300;color:rgba(215,226,234,.58);line-height:1.72;flex:1;overflow:hidden}
-.art-hover-link{display:inline-flex;align-items:center;gap:.45rem;font-size:clamp(.58rem,.72vw,.68rem);text-transform:uppercase;letter-spacing:.15em;color:rgba(220,100,30,.85);font-family:'Kanit',sans-serif;text-decoration:none;border-top:1px solid rgba(215,226,234,.08);padding-top:.65rem;margin-top:auto;transition:color .2s ease}
-.art-hover-link:hover{color:#fff}
-.art-hover-link svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;flex-shrink:0}
+.art-card:hover .art-hover-overlay{opacity:1;pointer-events:auto}
+.art-back-source{display:flex;align-items:center;gap:.45rem}
+.art-back-dot{width:5px;height:5px;border-radius:50%;background:rgba(220,100,30,.9);flex-shrink:0}
+.art-back-label{font-size:clamp(.55rem,.7vw,.65rem);font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:rgba(220,100,30,.85);font-family:'Kanit',sans-serif}
+.art-back-title{font-size:clamp(.82rem,1.25vw,.95rem);font-weight:600;color:#D7E2EA;line-height:1.4}
+.art-back-desc{font-size:clamp(.74rem,1.1vw,.86rem);font-weight:300;color:rgba(215,226,234,.6);line-height:1.7;flex:1;overflow:hidden}
+.art-back-desc strong{color:rgba(215,226,234,.92);font-weight:600}
+.art-back-link{display:inline-flex;align-items:center;gap:.45rem;flex-shrink:0;font-size:clamp(.58rem,.72vw,.68rem);text-transform:uppercase;letter-spacing:.15em;color:rgba(220,100,30,.85);font-family:'Kanit',sans-serif;text-decoration:none;border-top:1px solid rgba(215,226,234,.08);padding-top:.65rem;margin-top:auto;transition:color .2s ease}
+.art-back-link:hover{color:#fff}
+.art-back-link svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;flex-shrink:0}
+@media(max-width:640px){
+  .articles-inner{padding:0 1rem}
+  .articles-row{padding:0 1rem 1.2rem}
+  .art-card{width:clamp(240px,78vw,300px);height:auto}
+  .art-hover-overlay{position:relative;inset:auto;opacity:1;pointer-events:auto;background:rgba(10,10,10,.97);border-top:1px solid rgba(215,226,234,.08)}
+  .art-front{display:none}
+}
+
+.art-back-desc{font-size:clamp(.74rem,1.15vw,.88rem);font-weight:300;color:rgba(215,226,234,.6);line-height:1.72;flex:1;overflow:hidden}
+.art-back-desc strong{color:rgba(215,226,234,.92);font-weight:600}
+.art-back-link{
+  display:inline-flex;align-items:center;gap:.45rem;flex-shrink:0;
+  font-size:clamp(.58rem,.72vw,.68rem);text-transform:uppercase;letter-spacing:.15em;
+  color:rgba(220,100,30,.85);font-family:'Kanit',sans-serif;text-decoration:none;
+  border-top:1px solid rgba(215,226,234,.08);padding-top:.65rem;margin-top:auto;
+  transition:color .2s ease;
+}
+.art-back-link:hover{color:#fff}
+.art-back-link svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;flex-shrink:0}
 
 @media(max-width:640px){
   .articles-inner{padding:0 1rem}
   .articles-row{padding:0 1rem 1.2rem}
-  .art-card{width:clamp(240px,78vw,300px)}
-  .art-hover{position:relative;top:auto;left:auto;right:auto;bottom:auto;opacity:1;pointer-events:auto;background:rgba(10,10,10,.96)}
-  .art-front{display:none}
+  .art-card{width:clamp(240px,78vw,300px);height:auto}
+  .art-flip{transform:none !important;transform-style:flat}
+  .art-face{position:relative;inset:auto;-webkit-backface-visibility:visible;backface-visibility:visible}
+  .art-face-back{transform:none;display:flex;border-radius:0 0 1.4rem 1.4rem;border-top:1px solid rgba(215,226,234,.08)}
+  .art-face-front{border-radius:1.4rem 1.4rem 0 0}
 }
 
 
@@ -666,87 +689,82 @@ footer{background:#0C0C0C;text-align:center;padding:5rem 2rem 3rem;color:rgba(21
     <p class="articles-eyebrow">In The News</p>
     <h2 class="articles-heading">The brutal reality of two-wheeler safety in India.</h2>
   </div>
+  <div class="articles-row-wrap">
   <div class="articles-row" id="articlesRow">
 
     <!-- 01 Times of India -->
     <a class="art-card fade-in" data-delay="0.05" href="https://timesofindia.indiatimes.com/india/standard-helmets-seat-belts-could-have-saved-thousands-of-lives-on-roads-in-2024/articleshow/131693270.cms" target="_blank" rel="noopener">
       <div class="art-thumb">
-        <img src="https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=600&q=80&auto=format&fit=crop" alt="Road accident" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none';this.parentElement.querySelector('.art-thumb-fallback').style.display='flex'">
-        <div class="art-thumb-fallback" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:rgba(12,12,12,.85)"><span class="art-thumb-stat">81,780</span></div>
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782980937/pexels-valentin-sarte-2902892-12002262_al0can.jpg" alt="Road accident" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
         <div class="art-thumb-tint"></div>
       </div>
       <div class="art-front">
         <div class="art-label"><span class="art-label-dot"></span><span class="art-label-source">Times of India</span><span class="art-label-type">· Fatalities Report</span></div>
         <div class="art-title">81,780 two-wheeler riders died in India in 2024 — 224 deaths every single day</div>
       </div>
-      <div class="art-hover">
-        <div class="art-hover-source"><span class="art-hover-dot"></span><span class="art-hover-label">Times of India — MoRTH 2024</span></div>
-        <div class="art-hover-title">81,780 two-wheeler riders died in India in 2024</div>
-        <p class="art-hover-desc">More than 9 deaths every hour. Road safety experts estimate over 40% could likely have survived with proper helmets — tens of thousands of preventable deaths every year.</p>
-        <a class="art-hover-link" href="https://timesofindia.indiatimes.com/india/standard-helmets-seat-belts-could-have-saved-thousands-of-lives-on-roads-in-2024/articleshow/131693270.cms" target="_blank" rel="noopener">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <div class="art-hover-overlay">
+        <div class="art-back-source"><span class="art-back-dot"></span><span class="art-back-label">Times of India — MoRTH 2024</span></div>
+        <p class="art-back-desc">That is <strong>~224 deaths every single day</strong> — more than 9 deaths every hour. According to road safety experts, over <strong>40% could likely have survived</strong> with proper helmets. Tens of thousands of these deaths were preventable.</p>
+        <a class="art-back-link" href="https://timesofindia.indiatimes.com/india/standard-helmets-seat-belts-could-have-saved-thousands-of-lives-on-roads-in-2024/articleshow/131693270.cms" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
       </div>
     </a>
 
     <!-- 02 NDTV Auto -->
     <a class="art-card fade-in" data-delay="0.1" href="https://www.ndtv.com/auto/no-helmet-no-excuses-fixing-indias-most-avoidable-road-safety-crisis-11354346/amp/1" target="_blank" rel="noopener">
       <div class="art-thumb">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Delivery rider" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none';this.parentElement.querySelector('.art-thumb-fallback').style.display='flex'">
-        <div class="art-thumb-fallback" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:rgba(12,12,12,.85)"><span class="art-thumb-stat">40–45%</span></div>
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782980943/images_qdsplq.jpg" alt="Delivery rider" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
         <div class="art-thumb-tint"></div>
       </div>
       <div class="art-front">
         <div class="art-label"><span class="art-label-dot"></span><span class="art-label-source">NDTV Auto</span><span class="art-label-type">· Road Safety Crisis</span></div>
         <div class="art-title">40–45% of India's 1.5 lakh annual road deaths involve two-wheelers</div>
       </div>
-      <div class="art-hover">
-        <div class="art-hover-source"><span class="art-hover-dot"></span><span class="art-hover-label">NDTV Auto — April 14, 2026</span></div>
-        <div class="art-hover-title">No Helmet, No Excuses: Fixing India's Most Avoidable Road Safety Crisis</div>
-        <p class="art-hover-desc">Most fatal injuries are head injuries a certified helmet can prevent. Your bike has no crumple zone. Your helmet is your only one.</p>
-        <a class="art-hover-link" href="https://www.ndtv.com/auto/no-helmet-no-excuses-fixing-indias-most-avoidable-road-safety-crisis-11354346/amp/1" target="_blank" rel="noopener">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <div class="art-hover-overlay">
+        <div class="art-back-source"><span class="art-back-dot"></span><span class="art-back-label">NDTV Auto — April 14, 2026</span></div>
+        <p class="art-back-desc">India records over <strong>1.5 lakh road deaths annually</strong>, with 40–45% involving two-wheelers. Most fatal injuries are head injuries that a certified helmet can help prevent. <strong>Your bike has no crumple zone. Your helmet is your only one.</strong></p>
+        <a class="art-back-link" href="https://www.ndtv.com/auto/no-helmet-no-excuses-fixing-indias-most-avoidable-road-safety-crisis-11354346/amp/1" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
       </div>
     </a>
 
     <!-- 03 PIB Govt -->
     <a class="art-card fade-in" data-delay="0.15" href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154872&id=154872&reg=48&lang=2" target="_blank" rel="noopener">
       <div class="art-thumb">
-        <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=600&q=80&auto=format&fit=crop" alt="Indian road traffic" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none';this.parentElement.querySelector('.art-thumb-fallback').style.display='flex'">
-        <div class="art-thumb-fallback" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:rgba(12,12,12,.85)"><span class="art-thumb-stat">44.5%</span></div>
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782980943/image001MXN6_ogewvk.png" alt="Indian road" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
         <div class="art-thumb-tint"></div>
       </div>
       <div class="art-front">
         <div class="art-label"><span class="art-label-dot"></span><span class="art-label-source">Govt. of India — PIB</span><span class="art-label-type">· Official Safety Note</span></div>
         <div class="art-title">44.5% of all road fatalities in India involve two-wheelers — Government confirmed</div>
       </div>
-      <div class="art-hover">
-        <div class="art-hover-source"><span class="art-hover-dot"></span><span class="art-hover-label">PIB Press Note — Ministry of Road Transport</span></div>
-        <div class="art-hover-title">Nearly half of all road fatalities involve two-wheelers</div>
-        <p class="art-hover-desc">India's roads are structurally unforgiving — potholes, trucks, bad lane discipline, stray animals. Your bike gives you zero external protection. Your helmet is your only crumple zone.</p>
-        <a class="art-hover-link" href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154872&id=154872&reg=48&lang=2" target="_blank" rel="noopener">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <div class="art-hover-overlay">
+        <div class="art-back-source"><span class="art-back-dot"></span><span class="art-back-label">PIB — Ministry of Road Transport</span></div>
+        <p class="art-back-desc">Nearly half of all road fatalities involve two-wheelers. India's roads are structurally unforgiving — <strong>potholes, trucks, bad lane discipline, stray animals, sudden braking, oil spills</strong>. Your bike gives you <strong>zero external protection. Your helmet is your only crumple zone.</strong></p>
+        <a class="art-back-link" href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154872&id=154872&reg=48&lang=2" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
       </div>
     </a>
 
     <!-- 04 India Today -->
     <a class="art-card fade-in" data-delay="0.2" href="https://www.indiatoday.in/amp/diu/story/two-wheeler-death-road-accidents-helmets-states-india-1602794-2019-09-24" target="_blank" rel="noopener">
       <div class="art-thumb">
-        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600&q=80&auto=format&fit=crop" alt="Rider with helmet" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none';this.parentElement.querySelector('.art-thumb-fallback').style.display='flex'">
-        <div class="art-thumb-fallback" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;background:rgba(12,12,12,.85)"><span class="art-thumb-stat">74%</span></div>
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782980937/pexels-david-iloba-28486424-16114745_onn7me.jpg" alt="Rider with helmet" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
         <div class="art-thumb-tint"></div>
       </div>
       <div class="art-front">
         <div class="art-label"><span class="art-label-dot"></span><span class="art-label-source">India Today DIU</span><span class="art-label-type">· Data Investigation</span></div>
         <div class="art-title">74% of two-wheeler riders who died weren't wearing helmets — 4 deaths every hour</div>
       </div>
-      <div class="art-hover">
-        <div class="art-hover-source"><span class="art-hover-dot"></span><span class="art-hover-label">India Today DIU — Feb. 8, 2022</span></div>
-        <div class="art-hover-title">4 people die every hour in India because they do not wear a helmet</div>
-        <p class="art-hover-desc">73.8% of 48,746 two-wheeler deaths in 2017 involved no helmet. A helmet isn't just a legal requirement — it's a lifesaver. The data is unambiguous.</p>
-        <a class="art-hover-link" href="https://www.indiatoday.in/amp/diu/story/two-wheeler-death-road-accidents-helmets-states-india-1602794-2019-09-24" target="_blank" rel="noopener">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <div class="art-hover-overlay">
+        <div class="art-back-source"><span class="art-back-dot"></span><span class="art-back-label">India Today DIU — Feb. 8, 2022</span></div>
+        <p class="art-back-desc">In 2017, 48,746 two-wheeler users lost their lives in road accidents. <strong>73.8% were not wearing a helmet</strong> — equivalent to <strong>4 preventable deaths every hour</strong>. A helmet isn't just a legal requirement — it's a lifesaver.</p>
+        <a class="art-back-link" href="https://www.indiatoday.in/amp/diu/story/two-wheeler-death-road-accidents-helmets-states-india-1602794-2019-09-24" target="_blank" rel="noopener" onclick="event.stopPropagation()">Read full article <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
       </div>
     </a>
 
     <!-- 05 Instagram Reel -->
     <a class="art-card fade-in" data-delay="0.25" href="https://www.instagram.com/reel/DRb5ahYj7Vn/" target="_blank" rel="noopener">
-      <div class="art-thumb art-thumb-video">
+      <div class="art-thumb art-thumb-video" style="position:relative">
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782982410/pexels-chipi1189-36660888_xqnpmx.jpg" alt="Video reel" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div class="art-thumb-tint"></div>
         <div class="art-thumb-inner">
           <div class="art-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
         </div>
@@ -755,14 +773,14 @@ footer{background:#0C0C0C;text-align:center;padding:5rem 2rem 3rem;color:rgba(21
         <div class="art-label"><span class="art-label-dot"></span><span class="art-label-source">Instagram</span><span class="art-label-type">· Video Reel</span></div>
         <div class="art-title">The reality of two-wheeler safety in India — watch the reel</div>
       </div>
-      <div class="art-hover">
-        <div class="art-hover-source"><span class="art-hover-dot"></span><span class="art-hover-label">Instagram Reel — @palavita</span></div>
-        <div class="art-hover-title">Watch: India's two-wheeler safety crisis in under 60 seconds</div>
-        <p class="art-hover-desc">A short reel capturing the real-world scale of India's road safety crisis. Tap to watch on Instagram.</p>
-        <a class="art-hover-link" href="https://www.instagram.com/reel/DRb5ahYj7Vn/" target="_blank" rel="noopener">Watch on Instagram <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <div class="art-hover-overlay">
+        <div class="art-back-source"><span class="art-back-dot"></span><span class="art-back-label">Instagram Reel</span></div>
+        <p class="art-back-desc">A short video capturing the <strong>real-world scale of India's two-wheeler safety crisis</strong>. Tap the link below to watch on Instagram.</p>
+        <a class="art-back-link" href="https://www.instagram.com/reel/DRb5ahYj7Vn/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Watch on Instagram <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
       </div>
     </a>
 
+  </div>
   </div>
 </section>
 
@@ -1194,7 +1212,7 @@ footer{background:#0C0C0C;text-align:center;padding:5rem 2rem 3rem;color:rgba(21
     <!-- 03 Accident Awareness -->
     <div class="uc-card fade-in" data-delay="0.05">
       <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=800&q=80&auto=format&fit=crop" alt="Accident Awareness" loading="lazy">
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782982361/pexels-chipi1189-36660898_fw46ii.jpg" alt="Accident Awareness" loading="lazy">
       </div>
       <div class="uc-body">
         <div class="uc-num">03</div>
@@ -1213,7 +1231,7 @@ footer{background:#0C0C0C;text-align:center;padding:5rem 2rem 3rem;color:rgba(21
     <!-- 04 Youth & Education -->
     <div class="uc-card fade-in" data-delay="0.05">
       <div class="uc-img">
-        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&q=80&auto=format&fit=crop" alt="Youth & Education" loading="lazy">
+        <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782982325/pexels-ene-marius-241207761-27522131_wnxfiq.jpg" alt="Youth & Education" loading="lazy">
       </div>
       <div class="uc-body">
         <div class="uc-num">04</div>
